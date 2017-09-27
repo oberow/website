@@ -18,6 +18,8 @@ module.exports = {
     devServer: {
         // contentBase: "./source", //get files from where
         historyApiFallback: true,
-        inline: true
+        inline: true,
+        //heroku sets the port dynamically so use the port defined in the process instead
+        port: process.env.PORT
     }
 };
