@@ -2,25 +2,72 @@
 <html>
 
 <head>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Source Serif Pro', serif;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: black;
+    }
+
+    .navbar a {
+      color: #f9f9f9;
+      text-decoration: none;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+    }
+
+    .navebar ul {
+      float: right;
+      height: 28px
+    }
+
+    .navbar li {
+      float: left;
+      padding: 0 10px
+    }
+
+    .navbar li:last-child {
+      padding-right: 0
+    }
+
+    .navbar svg {
+      width: 28px;
+      height: 28px;
+      opacity: 0.6
+    }
+
+    /* .navbar a:hover svg {
+      opacity: 0.8
+    } */
+  </style>
   <% include ../partials/header.ejs %>
 </head>
 
 <body>
   <% include ../partials/nav.ejs %>
-    <div id='root'></div>
-    <ul>
+    <section id="books">
       <li>Books</li>
       <ul>
         <li>
           <a href=/book/book1>book1</a>
         </li>
       </ul>
+    </section>
+    <section id="notes">
       <li>Notes</li>
       <ul>
         <li>
           <a href=/note/note1>note1</a>
         </li>
       </ul>
+    </section>
+    <section id="todolist">
       <li>todolist</li>
       <ol>
         <li>how to integrate react with static content?</li>
@@ -28,8 +75,8 @@
         <li>add MongoDB? database to website</li>
         <li>add todolist app</li>
       </ol>
+    </section>
 
-    </ul>
 </body>
 
 </html>
