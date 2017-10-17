@@ -1,6 +1,6 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: [
@@ -21,12 +21,12 @@ module.exports = {
         }]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
-            title: 'Output Management',
-            template: 'source/index.template.ejs',
-            inject: 'body'
-        })
+        // new CleanWebpackPlugin(['dist']),
+        // new HtmlWebpackPlugin({
+        //     title: 'Output Management',
+        //     template: 'source/index.template.ejs',
+        //     inject: 'body'
+        // })
     ],
     devServer: {
         contentBase: "./dist", //get files from where
