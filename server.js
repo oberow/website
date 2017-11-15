@@ -1,25 +1,24 @@
 var express = require("express");
 var path = require("path");
 
+//get routes
+var note = require('./source/routes/note');
+var home = require('./source/routes/home');
+
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(path.join(__dirname,"/dist")));
+app.use(express.static(path.join(__dirname, 'public')));
 
-console.log(path.join(__dirname,"/dist"));
-// app.use(express.static(__dirname));
+//view engine setup
+app.set('views', __dirname + '/source');
+app.set('view engine', 'ejs');
 
-app.set('views',__dirname + '/source');
-app.set('view engine','ejs');
+//use routes
+app.use('/', home);
+app.use('/note', note);
 
-app.get('/',function(request,response){
-    response.render('pages/index');
-})
-app.get('/about',function(request,response){
-    response.render('pages/about');
-})
-
-app.listen(app.get('port'),function(){
+app.listen(app.get('port'), function () {
     console.log("Started listening on port", app.get('port'));
 })

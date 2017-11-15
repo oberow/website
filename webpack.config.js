@@ -4,11 +4,11 @@ const path = require('path')
 
 module.exports = {
     entry: [
-        './source/App.js'
+        './source/pages/note/getAll.js'
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: "bundle.js"
+        path: path.resolve(__dirname, 'public/js'),
+        filename: "getAll.js"
     },
     devtool: 'inline-source-map',
     module: {
@@ -34,5 +34,5 @@ module.exports = {
         inline: true,
         //heroku sets the port dynamically so use the port defined in the process instead
         // port: process.env.PORT
-    }
+    },
 };
