@@ -8,4 +8,6 @@ var note_controller = require('../controllers/noteController');
 /* GET catalog home page. */
 router.get('/', note_controller.index);
 
+router.get('/:title', note_controller.title);
+
 module.exports = router;
