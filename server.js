@@ -13,7 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //view engine setup
 app.set('views', __dirname + '/source');
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
+app.locals.basedir = path.join(__dirname); //tell pug what the basedir is
 
 //use routes
 app.use('/', home);
