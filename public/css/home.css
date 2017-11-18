@@ -58,6 +58,7 @@ body {
 main {
   width: 60%;
   margin: 60px auto 0px;
+  max-width: 750px;
 }
 
 section ul,

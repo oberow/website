@@ -6,16 +6,16 @@ var path = require('path');
 var fs = require('fs');
 
 var showdown = require('showdown');
-// converter = new showdown.Converter(),
-// text      = '#hello, markdown!',
-// html      = converter.makeHtml(text);
-
 var files = fs.readdirSync(path.join(__dirname, '../../note'));
 var noteDir = path.join(__dirname, '../../note');
 
 exports.index = function (req, res) {
+    let filenamesWithoutExtension = getFilenamesWithoutExtension();
+
+    console.log(filenamesWithoutExtension);
+
     res.render('pages/note/index', {
-        books: files
+        notes: filenamesWithoutExtension
     });
 };
 
@@ -34,3 +34,17 @@ exports.title = function (req, res) {
         });
     })
 };
+
+function getFilenamesWithoutExtension() {
+    let filenamesWithoutExtension = files.map((fileName) => {
+        let filename = path.basename(fileName, path.extname(fileName));
+        let url = 'note/' + filename;
+        let title = filename.slice(11);
+
+        return {
+            url,
+            title
+        }
+    });
+    return filenamesWithoutExtension;
+}

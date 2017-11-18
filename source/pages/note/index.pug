@@ -1,8 +1,8 @@
 extends ../layout
 
 block content
-  h2 Books
+  h2 Notes
   ul
-  each book in books
-    li!= book
-  a(href='note/2017-09-01-test3') text
+  each note in notes
+    li
+      a(href=note.url)!= note.title
