@@ -18,9 +18,9 @@ block content
     h2 Notes
     a(href='/note') see all
     ul
-      each file in files
+      each note in notes
         li
-          a(href=file.url)= file.title
+          a(href=note.url)= note.title
   section#Experiments
     h2 Experiments
     ul

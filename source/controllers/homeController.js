@@ -7,9 +7,15 @@ var util = require('../utilities/util')
 
 var files = fs.readdirSync(path.join(__dirname, '../../note'));
 
-exports.index = function(req,res){
+exports.index = function (req, res) {
     let filenamesWithoutExtension = util.getFilenamesWithoutExtension(files);
 
-    console.log(filenamesWithoutExtension);
-    res.render('pages/index',{files: filenamesWithoutExtension})
+    filenamesWithoutExtension.sort(
+        function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        }
+    );
+    let latest5notes = filenamesWithoutExtension.slice(0,5);
+
+    res.render('pages/index', { notes: latest5notes })
 };

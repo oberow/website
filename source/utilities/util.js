@@ -6,10 +6,12 @@ exports.getFilenamesWithoutExtension = function getFilenamesWithoutExtension(fil
         let filename = path.basename(fileName, path.extname(fileName));
         let url = 'note/' + filename;
         let title = filename.slice(11);
+        let date = filename.slice(0, 10);
 
         return {
             url,
-            title
+            title,
+            date
         }
     });
     return filenamesWithoutExtension;
