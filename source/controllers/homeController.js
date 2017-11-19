@@ -1,7 +1,15 @@
 // var Author = require('../models/author');
 // var async = require('async');
 // var Book = require('../models/book');
+var path = require('path');
+var fs = require('fs');
+var util = require('../utilities/util')
+
+var files = fs.readdirSync(path.join(__dirname, '../../note'));
 
 exports.index = function(req,res){
-    res.render('pages/index')
+    let filenamesWithoutExtension = util.getFilenamesWithoutExtension(files);
+
+    console.log(filenamesWithoutExtension);
+    res.render('pages/index',{files: filenamesWithoutExtension})
 };

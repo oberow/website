@@ -18,9 +18,9 @@ block content
     h2 Notes
     a(href='/note') see all
     ul
-      li Lorem ipsum dolor sit amet
-      li Lorem ipsum dolor sit amet
-      li Lorem ipsum dolor sit amet
+      each file in files
+        li
+          a(href=file.url)= file.title
   section#Experiments
     h2 Experiments
     ul
