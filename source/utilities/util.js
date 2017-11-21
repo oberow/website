@@ -15,6 +15,17 @@ exports.getFilenamesWithoutExtension = function getFilenamesWithoutExtension(fil
         }
     });
     return filenamesWithoutExtension;
-}
+};
 
 
+exports.parseBooks = function (books) {
+    return books.map((fileName) => {
+        fs.readFile()
+
+
+
+
+    })
+
+
+};
