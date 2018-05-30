@@ -5,10 +5,12 @@ var util = require('../utilities/util')
 var files = fs.readdirSync(path.join(__dirname, '../../book'));
 
 exports.index = function (req, res) {
+
+    console.log(files);
     let books = util.parseBooks(files);
 
-    res.render('pages/note/index', {
-        books
+    res.render('pages/book/index', {
+        books: books
     });
 };
 
@@ -20,7 +22,7 @@ exports.title = function (req, res) {
             let converter = new showdown.Converter();
             let html = converter.makeHtml(data);
 
-            res.render('pages/note/detail', {
+            res.render('pages/book/detail', {
                 html: html
             });
         })

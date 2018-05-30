@@ -6,6 +6,7 @@ var note_controller = require('../controllers/noteController');
 // note routes
 
 /* GET catalog home page. */
+// in 
 router.get('/', note_controller.index);
 
 router.get('/:title', note_controller.title);

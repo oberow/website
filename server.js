@@ -4,6 +4,7 @@ var path = require("path");
 //get routes
 var note = require('./source/routes/note');
 var home = require('./source/routes/home');
+var book = require('./source/routes/book');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.locals.basedir = path.join(__dirname); //tell pug what the basedir is
 //use routes
 app.use('/', home);
 app.use('/note', note);
+app.use('/book', book);
 
 
 app.listen(app.get('port'), function () {

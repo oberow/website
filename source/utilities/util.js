@@ -18,14 +18,18 @@ exports.getFilenamesWithoutExtension = function getFilenamesWithoutExtension(fil
 };
 
 
-exports.parseBooks = function (books) {
-    return books.map((fileName) => {
-        fs.readFile()
+exports.parseBooks = function (files) {
+    let filenamesWithoutExtension = files.map((fileName) => {
+        let filename = path.basename(fileName, path.extname(fileName));
+        let url = 'book/' + filename;
+        let title = filename.slice(11);
+        let date = filename.slice(0, 10);
 
-
-
-
-    })
-
-
+        return {
+            url,
+            title,
+            date
+        }
+    });
+    return filenamesWithoutExtension;
 };
