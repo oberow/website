@@ -3,6 +3,8 @@ var fs = require('fs');
 var util = require('../utilities/util')
 
 var files = fs.readdirSync(path.join(__dirname, '../../book'));
+var showdown = require('showdown');
+var bookDir = path.join(__dirname, '../../book');
 
 exports.index = function (req, res) {
 
@@ -16,7 +18,7 @@ exports.index = function (req, res) {
 
 exports.title = function (req, res) {
 
-    let text = fs.readFile(noteDir + '/' + req.params.title + '.md', 'utf8',
+    let text = fs.readFile(bookDir + '/' + req.params.title + '.md', 'utf8',
         function (err, data) {
 
             let converter = new showdown.Converter();
