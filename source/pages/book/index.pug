@@ -2,7 +2,14 @@ extends ../layout
 
 block content
   h2 Books I've Read
-  ul
   each book in books
-    li
-      a(href=book.url)!= book.title
+    div
+      figure
+        a(href=book.pageUrl)= book.title + 'by: ' + book.author
+          img(src=book.imageUrl)
+      h2= book.title
+      small
+        p date read: #{book.dateRead}
+        p rating: #{book.rating}/10
+        p= book.summary
+

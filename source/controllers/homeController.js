@@ -28,5 +28,8 @@ exports.index = function (req, res) {
     let latest5books = books.slice(0,5);
     //console.log(latest5books)
 
+    //how does it know where pages/index is ?
+    //it uses the app.set('views', ...) directory set in server.js as the root directory
+    //the relative path below is appended to the root directory
     res.render('pages/index', { notes: latest5notes, books: latest5books })
 };

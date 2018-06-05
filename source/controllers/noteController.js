@@ -19,7 +19,7 @@ exports.index = function (req, res) {
 
 exports.title = function (req, res) {
 
-    console.log(noteDir);
+    // console.log(noteDir);
     let text = fs.readFile(noteDir + '/' + req.params.title + '.md', 'utf8',
         function (err, data) {
 

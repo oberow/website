@@ -8,7 +8,7 @@ var bookDir = path.join(__dirname, '../../book');
 
 exports.index = function (req, res) {
 
-    console.log(files);
+    //pass list of filenames
     let books = util.parseBooks(files);
 
     res.render('pages/book/index', {
@@ -18,11 +18,15 @@ exports.index = function (req, res) {
 
 exports.title = function (req, res) {
 
+    //assumes .md file extension :|
     let text = fs.readFile(bookDir + '/' + req.params.title + '.md', 'utf8',
         function (err, data) {
 
+            bookMetaData = util.getMetadata(data);
+            truncatedData = util.truncateData(data);
+
             let converter = new showdown.Converter();
-            let html = converter.makeHtml(data);
+            let html = converter.makeHtml(truncatedData);
 
             res.render('pages/book/detail', {
                 html: html

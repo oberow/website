@@ -20,6 +20,8 @@ app.set('view engine', 'pug');
 //basedir is prepended to includes if the includes path is absolute, ie /root.pug instead of aoeu/head.pug
 app.locals.basedir = path.join(__dirname); //tell pug what the basedir is
 
+// console.log(path.join(__dirname))
+
 //use routes
 app.use('/', home);
 app.use('/note', note);

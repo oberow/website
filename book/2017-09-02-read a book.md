@@ -1,4 +1,5 @@
 TITLE: this is a book title
+AUTHOR: Timothy Goh
 RATING: 2
 SUMMARY: this is a summary
 
