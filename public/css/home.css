@@ -66,3 +66,14 @@ section ol {
   list-style-type: none;
   padding: 0;
 }
+
+/* book index */
+/* css capital convention? */
+.abook{
+  margin: 0 0 8em 0;
+}
+
+section#booklist figure img{
+  float: left;
+  margin-right: 2em;
+}
