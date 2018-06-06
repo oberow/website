@@ -1,3 +1,7 @@
+html {
+  font-size: 20px;
+}
+
 body {
   background-color: #f9f9f9;
   font-family: 'Source Serif Pro', serif;
@@ -89,12 +93,23 @@ section#booklist figure img{
 /* general */
 h1 {
   font-size: 2em;
+  /* font-weight: normal; */
 }
 
 h2 {
   font-size: 1.5em;
+  /* font-weight: normal; */
 }
 
 small {
+  font-size: .8em;
+}
+
+div.abook small {
   color: #666;
+}
+
+main#index section h2 a{
+  margin-left: 2em;
+  font-weight: normal;
 }

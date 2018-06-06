@@ -1,18 +1,20 @@
 extends ../layout
 
 block content
-  section#booklist
-    h1 Books I've Read
-    each book in books
-      div(class='abook')
-        figure
-          a(href=book.pageUrl)
-            img(src=book.imageUrl)
-        h2
-          a(href=book.pageUrl)= book.title + 'by ' + book.author
-        small
-          ul
-            li date read: #{book.dateRead}
-            li rating: #{book.rating}/10
-        p= book.summary
+  main
+    section#booklist
+      h1 Books I've Read
+      each book in books
+        div(class='abook')
+          figure
+            a(href=book.pageUrl)
+              img(src=book.imageUrl)
+          h2
+            //- the a is nested inside the h2 so that it is on the same line as the h2
+            a(href=book.pageUrl)= book.title + ' by ' + book.author
+          small
+            ul
+              li date read: #{book.dateRead}
+              li rating: #{book.rating}/10
+          p= book.summary
 
