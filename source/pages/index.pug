@@ -7,6 +7,14 @@ block content
       //adding . after p lets you add a large block of text
       p.
         This website is a space for me to start writing again and to learn web development.
+    section#Projects
+      h2 Projects
+        a(href='/project')
+          small see all
+      ul
+        li Lorem ipsum dolor sit amet
+        li Lorem ipsum dolor sit amet
+        li Lorem ipsum dolor sit amet
     section#books
       h2 Books
         a(href='/book')
@@ -14,7 +22,7 @@ block content
       ul
         each book in books
           li
-            a(href=book.url)= book.title
+            a(href=book.pageUrl)= book.title
     section#notes
       h2 Notes
         a(href='/note')
@@ -23,12 +31,6 @@ block content
         each note in notes
           li
             a(href=note.url)= note.title
-    section#Experiments
-      h2 Experiments
-      ul
-        li Lorem ipsum dolor sit amet
-        li Lorem ipsum dolor sit amet
-        li Lorem ipsum dolor sit amet
 
 
 
