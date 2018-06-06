@@ -29,21 +29,15 @@ exports.parseBooks = function (files) {
 
         console.log(fileName)
         let text = fs.readFileSync(bookDir + '/' + fileName);
-        // console.log(text)
         bookMetadata = util.getMetadata(text);
-
-        // console.log(bookMetadata)
-
-        // fs.readFile()
-
-        // let bookMetadata = getBookMetadata()
+        console.log(bookMetadata[2]);
 
         return {
             pageUrl,
             imageUrl,
             title: bookMetadata[0],
             dateRead, //strong type the date?
-            rating: bookMetadata[2],
+            rating: bookMetadata[2].trim(),
             author: bookMetadata[1],
             summary: bookMetadata[3],
         }

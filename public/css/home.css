@@ -73,7 +73,28 @@ section ol {
   margin: 0 0 8em 0;
 }
 
+/* section#booklist {
+  display: none;
+} */
+
+figure {
+  margin: 0;
+}
+
 section#booklist figure img{
   float: left;
   margin-right: 2em;
+}
+
+/* general */
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+small {
+  color: #666;
 }

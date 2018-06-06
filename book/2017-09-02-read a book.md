@@ -1,7 +1,7 @@
 TITLE: this is a book title
 AUTHOR: Timothy Goh
 RATING: 2
-SUMMARY: this is a summary
+SUMMARY: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat in ante metus dictum at tempor. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Libero enim sed faucibus turpis in eu mi bibendum. Pharetra convallis posuere morbi leo urna molestie at elementum. A cras semper auctor neque vitae. Non consectetur a erat nam at lectus urna. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Dignissim suspendisse in est ante in nibh. Ultrices sagittis orci a scelerisque purus semper eget. Viverra tellus in hac habitasse platea dictumst. Tincidunt vitae semper quis lectus.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat in ante metus dictum at tempor. Velit ut tortor pretium viverra suspendisse potenti nullam ac. Libero enim sed faucibus turpis in eu mi bibendum. Pharetra convallis posuere morbi leo urna molestie at elementum. A cras semper auctor neque vitae. Non consectetur a erat nam at lectus urna. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Dignissim suspendisse in est ante in nibh. Ultrices sagittis orci a scelerisque purus semper eget. Viverra tellus in hac habitasse platea dictumst. Tincidunt vitae semper quis lectus.
 
