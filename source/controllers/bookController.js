@@ -2,9 +2,9 @@ var path = require('path');
 var fs = require('fs');
 var util = require('../utilities/util')
 
-var files = fs.readdirSync(path.join(__dirname, '../../book'));
+var files = fs.readdirSync(path.join(__dirname, '../../content/book'));
 var showdown = require('showdown');
-var bookDir = path.join(__dirname, '../../book');
+var bookDir = path.join(__dirname, '../../content/book');
 
 exports.index = function (req, res) {
 

@@ -5,8 +5,9 @@ var path = require('path');
 var fs = require('fs');
 var util = require('../utilities/util')
 
-var noteFiles = fs.readdirSync(path.join(__dirname, '../../note'));
-var bookFiles = fs.readdirSync(path.join(__dirname, '../../book'));
+//code smell if path changes, everything breaks
+var noteFiles = fs.readdirSync(path.join(__dirname, '../../content/note'));
+var bookFiles = fs.readdirSync(path.join(__dirname, '../../content/book'));
 
 exports.index = function (req, res) {
     let filenamesWithoutExtension = util.getFilenamesWithoutExtension(noteFiles);

@@ -1,6 +1,9 @@
 var path = require('path');
 var fs = require('fs');
-var bookDir = path.join(__dirname, '../../book');
+
+//code smell
+var bookDir = path.join(__dirname, '../../content/book');
+
 var util = require('../utilities/util')
 
 exports.getFilenamesWithoutExtension = function getFilenamesWithoutExtension(files) {

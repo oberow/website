@@ -6,8 +6,8 @@ var fs = require('fs');
 var util = require('../utilities/util');
 
 var showdown = require('showdown');
-var files = fs.readdirSync(path.join(__dirname, '../../note'));
-var noteDir = path.join(__dirname, '../../note');
+var files = fs.readdirSync(path.join(__dirname, '../../content/note'));
+var noteDir = path.join(__dirname, '../../content/note');
 
 exports.index = function (req, res) {
     let filenamesWithoutExtension = util.getFilenamesWithoutExtension(files);
