@@ -2,5 +2,16 @@ extends ../layout
 
 block content
   main
-    h1 Notes
+    h1
+        //- the a is nested inside the h2 so that it is on the same line as the h2
+        a(href=book.amazonUrl)= book.title + ' by ' + book.author
+    div(class='abook')
+      figure
+        a(href=book.amazonUrl)
+          img(src=book.imageUrl)
+      small
+        ul
+          li date read: #{book.dateRead}
+          li rating: #{book.rating}/10
+        p= book.summary
       p!= html

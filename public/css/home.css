@@ -77,6 +77,12 @@ section ol {
   margin: 0 0 8em 0;
 }
 
+/* detail figure page */
+.abook figure{
+  float: left;
+  margin-right: 2em;
+}
+
 /* section#booklist {
   display: none;
 } */
